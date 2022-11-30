@@ -1,6 +1,8 @@
+<!--INSCRIPTION PAGE-->
 <?php include 'header.php';?>
 <?php include 'dbconnect.php';?>    <!--connexion à la base de données-->
-<div class="container">
+
+<main>
     <?php
         /* page: inscription.php */
         //par défaut, on affiche le formulaire
@@ -40,7 +42,7 @@
             <div class="module">
                 <br />
                 <form method="post" action="">
-                    Nom d'utilisateur (a-z0-9) : <input type="text" name="login">
+                    Nom d'utilisateur : <input type="text" name="login">
                     <br />
                     Nom : <input type="text" name="nom">
                     <br />
@@ -56,6 +58,6 @@
             <?php
         }
     ?>
-</div>
+</main> <!-- /main -->
 
 <?php include 'footer.php';?>

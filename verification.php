@@ -1,3 +1,4 @@
+                                        <!--VERIFICATION PAGE-->
 <?php
     include 'dbconnect.php';  // connexion à la base de données
     session_start();
@@ -32,16 +33,19 @@
 
                         header('Location: profil.php');
                     }
+                    else{
+                        header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
+                    }
                 }
-        else
-        {
-            header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
-        }
-        }
-        else
-        {
-            header('Location: connexion.php?erreur=2'); // utilisateur ou mot de passe vide
-        }
+                else
+                {
+                    header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
+                }
+            }
+            else
+            {
+                header('Location: connexion.php?erreur=2'); // utilisateur ou mot de passe vide
+            }
         }
         else
         {

@@ -1,3 +1,4 @@
+                                        <!--DBCONNECT BLOC-->
 <?php
         $conn = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
         if(!$conn) {

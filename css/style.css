@@ -1,67 +1,229 @@
-body{
-    background: burlywood;
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Consolas', Monospace;
+    font-weight: 400!important;
+    background: #90a4ae;
 }
-.row {
-    display: row;
+a {
+    text-decoration: none;
+    color: #78909c;
 }
-.col {
-    display: column;
+ul { 
+    list-style: none;
+}
+.puce {
+    list-style: disc;
+}
+/*** TOOLS ***/
+.alice  { background: aliceblue;}
+.tleft { text-align: left;}
+.tright { text-align: right;}
+.ice { color: aliceblue;}
+.right { float: right;}
+/*** TITLES ***/
+h1{
+    font-size: 35px;
+    color: #37474f;
+    text-align: center;
+    margin: 30px auto;
+    font-weight: 400;
+}
+h2 {
+    background: #37474F;
+    padding: 10px 20px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 40px 0 50px 0;
+    font-weight: 400;
+    width: 100%;
+}
+h3 {
+    color: #37474f;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 400;
+}
+
+.f20 {
+    font-size: 20px;
+}
+/*** CONTAINERS ***/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+    color: #fff;
+    height: 100px;
+    z-index: 1;
 }
 .container {
+    background: aliceblue;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    width: 100%;
+    margin: auto;
+}
+main {
+    padding-top: 130px;
+    padding-bottom: 130px;
     width: 80%;
     margin: auto;
 }
 .module{
     width:400px;
-    margin:0 auto;
-    margin-top:10%;
+    margin: 5% auto;
 }
-button {
-    padding : 5px 10px;
-    margin: 0 5px;
+.module2 {
+    width: 100%;
+    margin: 5% auto;
 }
-.header {
-    background-color: iceblue;
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background: #37474f;
+    height: 100px;
+    padding-top: 0; 
 }
-.footer {
-    background-color: iceblue;
+header a {
+    color: #78909c;
+    text-decoration: none;
 }
-   /* Bordered form */
+header a:hover {
+    color: #fff;
+}
+footer {
+    width: 100%;
+    background: #37474f;
+    color: aliceblue;
+}
+/*** FLEX ***/
+.row {
+    display: flex;
+    margin: 0 auto;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1 px solid #7D7D7D;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.flex2 {
+    width:40%;
+}
+.flex3 {
+    width: 33.33%;
+}
+.flex4 {
+    width: 25%;
+}
+.end {
+    justify-items: flex-end;
+}
+.start {
+    justify-items: flex-start;
+}
+.spbet {
+    justify-content: space-between;
+}
+.center {
+    justify-items: center;
+    align-items: center;
+}
+/*** FORMS ***/
 form {
     width:100%;
     padding: 30px;
     border: 1px solid #7D7D7D;
-    background: #fff;
+    background: #fafafa;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-#container h1{
-    width: 38%;
-    margin: 0 auto;
-    padding-bottom: 10px;
+form:hover {
+    z-index: 1;
 }
-
-   /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px auto;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #2e383d;
     box-sizing: border-box;
+    transition: easease-in-out 0.5s;
 }
 
    /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #53af57;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
+    background-color: #90A4AE;
+    color: #333;
+    border: 1px solid #37474f;
+    padding: 12px 20px;
+    margin: 8px auto;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
+    transition: easease-in-out 0.5s;
 }
 input[type=submit]:hover {
-    background-color: white;
-    color: #53af57;
-    border: 1px solid #53af57;
+    background: #37474f;
+    border: 1px solid #78909c;
+    color: #78909c;
+}
+/*** FA ***/
+.fa-solid {
+    color: #37474f;
+}
+.fa-home {
+    color: #fff;
+    padding: 0 10px;
+}
+    .fa-envelope {
+    color: aliceblue;
+    padding: 0 10px;
+}
+
+.mail:hover .fa-envelope:before {
+    content: "\f658";
+    color: #78909c;
+    transform: rotate(-30deg);
+}
+/*** ELEMENTS ***/
+button {
+    background: #78909c;
+    border: 1px solid #2e383d;
+    color: #fff;
+    padding : 5px 10px;
+    margin: 0 5px;
+    transition: ease-in-out 0.5s;
+}
+button:hover {
+    background: #37474f;
+    border: 1px solid #78909c;
+    color: #78909c;
+    cursor: pointer;
+}
+.card {
+    background: #fff;
+    line-height: 20px;
+    border: 1px solid #78909c;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+.pan {
+    width: 100%;
+    background: beige;
+    border: 1px solid #78909c;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }

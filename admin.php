@@ -1,3 +1,4 @@
+<!--ADMIN PAGE-->
 <?php
 include 'header.php';
 include 'dbconnect.php';
@@ -5,7 +6,7 @@ $request = $conn->query("SELECT * from `utilisateurs`;");
 
 ?>
 
-<div class="container">
+<main>
 
     <h2>Bonjour Admin, voilà l’ensemble des informations des utilisateurs présents dans la base de
     données 'moduleconnexion'</h2>
@@ -30,5 +31,5 @@ $request = $conn->query("SELECT * from `utilisateurs`;");
                     ?>
                 </tbody>
             </table>
-</div> <!-- /container -->
+</main> <!-- /main -->
 <?php include 'footer.php'; ?>
