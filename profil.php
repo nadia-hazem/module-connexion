@@ -1,7 +1,12 @@
 <!--PROFIL PAGE-->
+
 <?php include 'header.php';?>
 <?php include 'dbconnect.php';?>
-
+<?php                 
+    if (!$_SESSION ['loginOK']) {
+        header('Location: connexion.php');
+    }
+?>
 <?php
     $login = $_SESSION['login'];
     $nom = $_SESSION['nom'];

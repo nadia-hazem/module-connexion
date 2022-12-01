@@ -24,6 +24,7 @@
                         header('Location: index.php');
                     }
                 }
+
                 else if (isset($_SESSION['login'])) {
                     $user = $_SESSION['login'];
                     // afficher un message

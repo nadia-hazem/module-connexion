@@ -1,10 +1,15 @@
 <!--ADMIN PAGE-->
-<?php
-include 'header.php';
-include 'dbconnect.php';
-$request = $conn->query("SELECT * from `utilisateurs`;");
 
+<?php include 'header.php'; ?>
+<?php include 'dbconnect.php'; ?>
+<?php                 
+    if (!$_SESSION ['loginOK']) {
+        header('Location: connexion.php');
+    }else if ($user != 'admin') {
+        header('Location: index.php');
+    }
 ?>
+<?php $request = $conn->query("SELECT * from `utilisateurs`;");?>
 
 <main>
 

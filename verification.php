@@ -30,7 +30,8 @@
                         $_SESSION['nom'] = $reponse['nom'];
                         $_SESSION['prenom'] = $reponse['prenom'];
                         $_SESSION['password'] = $reponse['password'];
-
+                        
+                        $_SESSION['loginOK'] = true;
                         header('Location: profil.php');
                     }
                     else{
