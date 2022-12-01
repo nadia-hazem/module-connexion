@@ -44,11 +44,17 @@ h2 {
 }
 h3 {
     color: #37474f;
-    text-align: center;
+    text-align: left;
     margin: 20px auto;
     font-weight: 400;
 }
-
+table, th, td {
+    border: 1px solid #37474f;
+    border-collapse: collapse;
+    background: aliceblue;
+    padding:10px;
+    margin: auto;
+}
 .f20 {
     font-size: 20px;
 }
@@ -80,7 +86,7 @@ main {
     margin: 5% auto;
 }
 .module2 {
-    width: 100%;
+    width: 75%;
     margin: 5% auto;
 }
 header {
@@ -94,6 +100,7 @@ header {
 header a {
     color: #78909c;
     text-decoration: none;
+    transition: ease-in-out 0.5s;
 }
 header a:hover {
     color: #fff;
@@ -103,28 +110,33 @@ footer {
     background: #37474f;
     color: aliceblue;
 }
+.foot {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0 50px 0;
+}
 /*** FLEX ***/
 .row {
     display: flex;
+    gap: 5%;
     margin: 0 auto;
 }
 .col {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    border: 1 px solid #7D7D7D;
 }
 .wrap {
     flex-wrap: wrap;
 }
 .flex2 {
-    width:40%;
+    width: 47.5%;
 }
 .flex3 {
-    width: 33.33%;
+    width: 31.66%;
 }
 .flex4 {
-    width: 25%;
+    width: 23.75%;
 }
 .end {
     justify-items: flex-end;
@@ -157,7 +169,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #2e383d;
     box-sizing: border-box;
-    transition: easease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
 }
 
    /* Set a style for all buttons */
@@ -168,8 +180,7 @@ input[type=submit] {
     padding: 12px 20px;
     margin: 8px auto;
     cursor: pointer;
-    width: 50%;
-    transition: easease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
 }
 input[type=submit]:hover {
     background: #37474f;
@@ -179,20 +190,30 @@ input[type=submit]:hover {
 /*** FA ***/
 .fa-solid {
     color: #37474f;
+    transition: ease-in-out 0.5s;
+}
+.fa-solid:hover {
+    color: #78909c;
 }
 .fa-home {
-    color: #fff;
+    color: #78909c;
     padding: 0 10px;
+    transition: ease-in-out 0.5s;
+}
+.fa-home:hover {
+    color: #fff;
 }
     .fa-envelope {
     color: aliceblue;
     padding: 0 10px;
+    transition: ease-in-out 0.5s;
 }
 
 .mail:hover .fa-envelope:before {
     content: "\f658";
     color: #78909c;
     transform: rotate(-30deg);
+    transition: ease-in-out 0.5s;
 }
 /*** ELEMENTS ***/
 button {

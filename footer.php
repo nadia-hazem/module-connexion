@@ -1,6 +1,6 @@
 <!--FOOTER BLOC-->
     <footer>
-        <main>
+        <div class="foot">
             <div class="row">
                 <div class="col flex3">
                     <p>© 2022 - Nadia Hazem</p>
@@ -16,12 +16,12 @@
                 </div> <!-- /col -->
 
                 <div class="col flex3">
-                    <img src="img/logo_laplateforme_footer.svg" width="200" alt="logo laplateforme">
+                    <img style="padding-bottom: 15px" src="img/logo_laplateforme_footer.svg" width="200" alt="logo laplateforme">
                     <em>Formation StartWeb La Plateforme_</em>
-                    <p>Développeuse informatique</p>
+                    <sub>Développeuse informatique</sub>
                 </div> <!-- /col -->
             </div>
-        </main> <!-- /main -->
+</div> <!-- /main -->
     </footer>
 </body>
 </html>

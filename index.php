@@ -3,7 +3,7 @@
 
     <div class="container bw">
         <h1>CODER UN MODULE DE CONNEXION PHP/SQL</h1>
-        <div class="row wrap">
+        <div class="row center wrap">
             <div class="col center flex2">
                 <img src="img/module.jpg" alt="module de connexion" width="350px">
             </div> <!-- /col -->
@@ -48,7 +48,8 @@
                     <ul>
                         <h3>BONUS</h3>
                         <li><i class="fa-solid fa-plus"></i> Chiffré le mot de passe</li>
-                        <li><i class="fa-solid fa-plus"></i> Permis le changement de mot de passe</li>
+                        <li><i class="fa-solid fa-plus"></i> Permis la modification de mot de passe</li>
+                        <li><i class="fa-solid fa-plus"></i> Permis la suppression de compte</li>
                         <li><i class="fa-solid fa-plus"></i> externalisé : <br>- le header <br>- le footer <br>- la connexion BDD <br>- les codes sources</li>
                     </ul>
                 </div> <!-- /col -->

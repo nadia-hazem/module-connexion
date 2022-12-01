@@ -28,26 +28,26 @@
                     $user = $_SESSION['login'];
                     // afficher un message
                     ?>
-                    <div class="top1">
-                        <?php echo '<a href="index.php">Accueil</a>  &nbsp;';?>
+                    <div>
+                        <?php echo '<a href="index.php"><i class="fa-solid fa-home"></i>Accueil</a>  &nbsp;';?>
                         <?php echo '<a href="profil.php">Profil</a>  &nbsp;';?>
                         <?php
                             if($_SESSION['login'] == 'admin'){
                                 echo '<a href="admin.php">Admin</a>  &nbsp;';
                             } ?>
                     </div>
-                    <div class="top2">
+                    <div>
                         <?php echo "Bonjour $user &nbsp;"; ?>
                     </div>
-                    <div class="top3">
+                    <div>
                         <?php echo '<a href="index.php?deconnexion=true"><button>Déconnexion</button></a>';?>
                     </div>
                     <?php
                 } else { ?>
-                    <div class="top1">
-                        <?php echo '<a href="index.php"><i class="fa-solid fa-home"></i>Accueil</a>  &nbsp;';?>
+                    <div>
+                        <?php echo '<a href="index.php"><i class="fa-solid fa-home"></i>Accueil</a>&nbsp;';?>
                     </div>
-                    <div class="top2">
+                    <div>
                         <?php echo '<a href="connexion.php"><button>Connexion</button></a>';
                         echo '<a href="inscription.php"><button>Inscription</button></a>';
                 }   

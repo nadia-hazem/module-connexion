@@ -15,19 +15,19 @@
             $prenom = mysqli_real_escape_string($conn, htmlspecialchars($_POST['prenom']));
             
             if($_POST['login'] = ""){
-                echo "Le champ nom d'utilisateur est vide.";
+                echo "<p style='color:red'>Le champ nom d'utilisateur est vide.</p>";
             } elseif(mysqli_num_rows(mysqli_query($conn,"SELECT * FROM utilisateurs WHERE login='".$_POST['login']."'"))==1){//on vérifie que ce pseudo n'est pas déjà utilisé par un autre membre
-                echo "Ce pseudo est déjà utilisé.";
+                echo "<p style='color:red'>Ce pseudo est déjà utilisé.</p>";
             } elseif($_POST['password']== "" || $_POST['password2']== ""){
-                echo "Le champs Mot de passe est vide.";
+                echo "<p style='color:red'>Le champs Mot de passe est vide.</p>";
             } elseif ($_POST['password'] != $_POST['password2']) { 
-                echo "Les mots de passe ne correspondent pas.";
+                echo "<p style='color:red'>Les mots de passe ne correspondent pas.</p>";
             } else {
                 //toutes les vérifications sont faites, on passe à l'enregistrement dans la base de données:
                 //cryptage du mot de passe
                 $password = password_hash($password, PASSWORD_DEFAULT);
                 if(!mysqli_query($conn,"INSERT INTO utilisateurs (login, nom, prenom, password) values('".$login."', '".$nom."', '".$prenom."', '".$password."')")) {
-                    echo "Une erreur s'est produite: ".mysqli_error($conn);
+                    echo "<p style='color:red'>Une erreur s'est produite: </p>".mysqli_error($conn);
                 } else {
                     echo "Vous êtes inscrit(e) avec succès!";
                     //on n'affiche plus le formulaire
@@ -39,15 +39,20 @@
         }
         if($AfficherFormulaire==1){
             ?>
-            <div class="module">
+            <div class="module2">
+                <h1>Créez votre profil</h1>
                 <br />
                 <form method="post" action="">
                     Nom d'utilisateur : <input type="text" name="login">
                     <br />
-                    Nom : <input type="text" name="nom">
-                    <br />
-                    Prénom : <input type="text" name="prenom">
-                    <br />
+                    <div class="row">
+                        <div class="col flex2">
+                            Nom : <input type="text" name="nom">                            
+                        </div>
+                        <div class="col flex2">
+                            Prénom : <input type="text" name="prenom">
+                        </div>
+                    </div>
                     Mot de passe : <input type="password" name="password">
                     <br />
                     Confirmez le mot de passe : <input type="password" name="password2">

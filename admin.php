@@ -8,14 +8,15 @@ $request = $conn->query("SELECT * from `utilisateurs`;");
 
 <main>
 
-    <h2>Bonjour Admin, voilà l’ensemble des informations des utilisateurs présents dans la base de
-    données 'moduleconnexion'</h2>
+    <h3>Bonjour Admin, voilà l’ensemble des informations des utilisateurs présents dans la base de
+    données 'moduleconnexion'</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>login</th>
-                        <th>nom</th>
-                        <th>prenom</th>
+                        <th>ID</th>
+                        <th>LOGIN</th>
+                        <th>NOM</th>
+                        <th>PRENOM</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,6 +24,7 @@ $request = $conn->query("SELECT * from `utilisateurs`;");
 
                         while(($resultat = $request->fetch_assoc()) != null){
                             echo "<tr>";
+                            echo "<td>".$resultat['id']."</td>";
                             echo "<td>".$resultat["login"]."</td>";
                             echo "<td>".$resultat["nom"]."</td>";
                             echo "<td>".$resultat["prenom"]."</td>";
@@ -31,5 +33,6 @@ $request = $conn->query("SELECT * from `utilisateurs`;");
                     ?>
                 </tbody>
             </table>
+
 </main> <!-- /main -->
 <?php include 'footer.php'; ?>
