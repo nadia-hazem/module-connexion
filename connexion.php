@@ -1,6 +1,6 @@
 <!--CONNEXION PAGE-->
 <?php include 'header.php';?>
-<?php include 'dbconnect.php';?>
+<?php include 'dbconnect.php';?> <!-- connecxion à la base de données -->
 
 <main>
     <div class="row">
@@ -10,7 +10,7 @@
         </div>
         <div class="col flex2">
             <div class="module">
-                <form action="verification.php" method="POST">
+                <form action="verification.php" method="POST"> <!-- redirection vers la page de vérification -->
                     <h1>Connexion</h1>
                     <label>Nom d'utilisateur</label>
                     <input type="text" placeholder="Entrer le nom d'utilisateur" name="login" required>

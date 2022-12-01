@@ -1,13 +1,13 @@
 <!--PROFIL PAGE-->
 
 <?php include 'header.php';?>
-<?php include 'dbconnect.php';?>
+<?php include 'dbconnect.php';?> <!--connexion à la base de données-->
 <?php                 
-    if (!$_SESSION ['loginOK']) {
-        header('Location: connexion.php');
+    if (!$_SESSION ['loginOK']) { // si la session n'est pas ouverte (protection de barre d'adresse)
+        header('Location: connexion.php'); // redirection vers la page de connexion
     }
 ?>
-<?php
+<?php // variables des informations de l'utilisateur
     $login = $_SESSION['login'];
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
@@ -47,7 +47,7 @@
             if(isset($_POST ['submit']) && isset ($_POST ['login']) && isset ($_POST ['password']) && isset ($_POST ['nom']) && isset ($_POST ['prenom'])){
                 $nom = $_POST ['nom'];
                 $prenom = $_POST ['prenom'];
-                if (password_verify($_POST ['password'], $password)) {
+                if (password_verify($_POST ['password'], $password)) { // vérification du mot de passe
                     $requete = "UPDATE utilisateurs SET login = '".$_POST ['login']."', nom = '".$nom."', prenom = '".$prenom."' WHERE login = '".$login."' ";
                     $resultat = mysqli_query($conn, $requete);
                     // stockage des nouvelles informations dans la session
@@ -62,7 +62,7 @@
                     echo "<p style='color:red'>Mot de passe incorrect</p>";
                 }
             }
-            else if (isset($_POST['delete'])) {
+            else if (isset($_POST['delete'])) { // suppression du compte
                 if (isset ($_POST ['password'])) {
                     if (password_verify($_POST['password'], $password)) {
                         $del = "DELETE FROM utilisateurs WHERE login = '$login'";
@@ -109,9 +109,9 @@
                     $password1 = $_POST ['password1'];
                     $password2 = $_POST ['password2'];
 
-                    if (password_verify($oldpassword, $password)) {
-                        if ($password1 == $password2) {
-                            $password = password_hash($password1, PASSWORD_DEFAULT);
+                    if (password_verify($oldpassword, $password)) { // vérification du mot de passe (ancien mot de passe)
+                        if ($password1 == $password2) { // vérification de la correspondance du nouveau mot de passe
+                            $password = password_hash($password1, PASSWORD_DEFAULT); // hashage du nouveau mot de passe
 
                             $requete = "UPDATE utilisateurs SET password = '".$password."' WHERE login = '".$login."' ";
                             $resultat = mysqli_query($conn, $requete);

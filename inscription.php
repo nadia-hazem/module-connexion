@@ -4,7 +4,6 @@
 
 <main>
     <?php
-        /* page: inscription.php */
         //par défaut, on affiche le formulaire
         $AfficherFormulaire=1;
         //traitement du formulaire:
@@ -14,7 +13,7 @@
             $nom = mysqli_real_escape_string($conn, htmlspecialchars($_POST['nom']));
             $prenom = mysqli_real_escape_string($conn, htmlspecialchars($_POST['prenom']));
             
-            if($_POST['login'] = ""){
+            if($_POST['login'] = ""){ // si le login est vide
                 echo "<p style='color:red'>Le champ nom d'utilisateur est vide.</p>";
             } elseif(mysqli_num_rows(mysqli_query($conn,"SELECT * FROM utilisateurs WHERE login='".$_POST['login']."'"))==1){//on vérifie que ce pseudo n'est pas déjà utilisé par un autre membre
                 echo "<p style='color:red'>Ce pseudo est déjà utilisé.</p>";
@@ -32,12 +31,12 @@
                     echo "Vous êtes inscrit(e) avec succès!";
                     //on n'affiche plus le formulaire
                     $AfficherFormulaire=0;
-                    header('Location: connexion.php');
+                    header('Location: connexion.php'); // redirection vers la page de connexion
                 }
             }
-            mysqli_close($conn);
+            mysqli_close($conn); // fermeture de la connexion à la base de données pour plus de propreté
         }
-        if($AfficherFormulaire==1){
+        if($AfficherFormulaire==1){ // si le formulaire doit être affiché
             ?>
             <div class="module2">
                 <h1>Créez votre profil</h1>

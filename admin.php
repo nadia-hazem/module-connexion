@@ -1,15 +1,15 @@
 <!--ADMIN PAGE-->
 
 <?php include 'header.php'; ?>
-<?php include 'dbconnect.php'; ?>
-<?php                 
-    if (!$_SESSION ['loginOK']) {
+<?php include 'dbconnect.php'; ?> <!-- connecxion à la base de données -->
+<?php // pour sécuriser la page admin à partir de la base d'adresse       
+    if (!$_SESSION ['loginOK']) {  // si la session n'est pas ouverte
         header('Location: connexion.php');
-    }else if ($user != 'admin') {
+    }else if ($user != 'admin') { // si l'utilisateur n'est pas admin
         header('Location: index.php');
     }
 ?>
-<?php $request = $conn->query("SELECT * from `utilisateurs`;");?>
+<?php $request = $conn->query("SELECT * from `utilisateurs`;");?> <!-- requête pour récupérer les données de la table utilisateurs -->
 
 <main>
 

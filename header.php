@@ -27,18 +27,18 @@
 
                 else if (isset($_SESSION['login'])) {
                     $user = $_SESSION['login'];
-                    // afficher un message
+                    // afficher les liens menus correspondants à la session
                     ?>
                     <div>
                         <?php echo '<a href="index.php"><i class="fa-solid fa-home"></i>Accueil</a>  &nbsp;';?>
                         <?php echo '<a href="profil.php"><i class="fa-solid fa-user"></i>Profil</a>  &nbsp;';?>
                         <?php
-                            if($_SESSION['login'] == 'admin'){
+                            if($_SESSION['login'] == 'admin'){ // si l'utilisateur est admin il peut accéder à la page admin
                                 echo '<a href="admin.php"><i class="fa-solid fa-screwdriver-wrench"></i>Admin</a>  &nbsp;';
                             } ?>
                     </div>
                     <div>
-                        <?php echo "Bonjour $user &nbsp;"; ?>
+                        <?php echo "Bonjour $user &nbsp;"; // connecté?> 
                     </div>
                     <div>
                         <?php echo '<a href="index.php?deconnexion=true"><button>Déconnexion</button></a>';?>
