@@ -30,10 +30,10 @@
                     ?>
                     <div>
                         <?php echo '<a href="index.php"><i class="fa-solid fa-home"></i>Accueil</a>  &nbsp;';?>
-                        <?php echo '<a href="profil.php">Profil</a>  &nbsp;';?>
+                        <?php echo '<a href="profil.php"><i class="fa-solid fa-user"></i>Profil</a>  &nbsp;';?>
                         <?php
                             if($_SESSION['login'] == 'admin'){
-                                echo '<a href="admin.php">Admin</a>  &nbsp;';
+                                echo '<a href="admin.php"><i class="fa-solid fa-screwdriver-wrench"></i>Admin</a>  &nbsp;';
                             } ?>
                     </div>
                     <div>

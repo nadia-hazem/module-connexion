@@ -12,6 +12,10 @@ a {
     text-decoration: none;
     color: #78909c;
 }
+em { 
+    color: aliceblue; 
+    text-align: center;
+}
 ul { 
     list-style: none;
 }
@@ -195,12 +199,12 @@ input[type=submit]:hover {
 .fa-solid:hover {
     color: #78909c;
 }
-.fa-home {
+.fa-home, .fa-user, .fa-screwdriver-wrench{
     color: #78909c;
     padding: 0 10px;
     transition: ease-in-out 0.5s;
 }
-.fa-home:hover {
+.fa-home:hover, .fa-user:hover, .fa-screwdriver-wrench:hover {
     color: #fff;
 }
     .fa-envelope {
